@@ -19,4 +19,6 @@
     <string name="calculate_tip">Калькулятор чаевых</string>
     <string name="bill_amount">Сумма счета</string>
     <string name="tip_amount">Чаевые: %s</string>
+    <string name="tip_precentage">Процент чаевых</string>
+    <string name="round_tip">Округлить чаевые?</string>
 </resources>
