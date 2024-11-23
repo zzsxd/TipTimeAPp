@@ -34,6 +34,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.tiptime.ui.theme.TipTimeTheme
 import java.text.NumberFormat
+import java.util.Locale
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,8 +105,9 @@ fun EditNumberField(
 
 
 private fun calculateTip(amount: Double, tipPercent: Double = 15.0): String {
+    val localeRUS = Locale("ru", "RU")
     val tip = tipPercent / 100 * amount
-    return NumberFormat.getCurrencyInstance().format(tip)
+    return NumberFormat.getCurrencyInstance(localeRUS).format(tip)
 }
 
 @Preview(showBackground = true, showSystemUi = true)
